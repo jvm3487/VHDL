@@ -1,0 +1,3 @@
+I produced this jointly with Sean Murray and Ashwin Dandekar.
+
+This is a simple VHDL project which takes an input of 18 switches of either on or off and computes and displays the hexidecimal representation on 5 seven segment LEDs.
