@@ -1,0 +1,104 @@
+Restore Archived Project report for cache_sim
+Thu Dec 04 20:13:48 2014
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Thu Dec 04 20:13:47 2014 ;
+; Revision Name                   ; cache_sim                             ;
+; Top-level Entity Name           ; cache_sim                             ;
+; Family                          ; Cyclone II                            ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'C:/Users/John/Documents/Duke/ECE 550/Complete Homeworks/Homework5_AJS/Homework5_AJS.qar' into the 'C:/Users/John/Documents/Duke/ECE 550/Complete Homeworks/Homework5_AJS/Homework5_AJS_restored/' directory
+Info: Generated report 'cache_sim.restore.rpt'
+Info (23030): Evaluation of Tcl script c:/altera/13.0/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus II 64-Bit Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 279 megabytes
+    Info: Processing ended: Thu Dec 04 20:13:48 2014
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------------------------+
+; Files Restored                                       ;
++------------------------------------------------------+
+; File Name                                            ;
++------------------------------------------------------+
+; adder.vhdl                                           ;
+; assignment_defaults.qdf                              ;
+; cache.vhd                                            ;
+; cache_sim.qpf                                        ;
+; cache_sim.qsf                                        ;
+; cache_sim.sdc                                        ;
+; cache_sim.vhd                                        ;
+; cache_sim_assignment_defaults.qdf                    ;
+; clkctrl.cmp                                          ;
+; clkctrl.qip                                          ;
+; clkctrl.vhd                                          ;
+; data.cmp                                             ;
+; data.qip                                             ;
+; data.vhd                                             ;
+; enc.vhdl                                             ;
+; incremental_db/compiled_partitions/cache_sim.db_info ;
+; led.vhdl                                             ;
+; mif2hex.tcl                                          ;
+; pll.cmp                                              ;
+; pll.ppf                                              ;
+; pll.qip                                              ;
+; pll.vhd                                              ;
+; rcaddrSevenBit.vhd                                   ;
+; reg.vhdl                                             ;
+; tags.cmp                                             ;
+; tags.qip                                             ;
+; tags.vhd                                             ;
+; testrom.cmp                                          ;
+; testrom.qip                                          ;
+; testrom.vhd                                          ;
+; stores.hex                                           ;
++------------------------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

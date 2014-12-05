@@ -1,0 +1,3 @@
+I produced this jointly with Sean Murray and Ashwin Dandekar.
+
+Our part of the project was implementing the cache.vhd file and its componenets which functionally represents the cache.  The cache_sim.vhd is the top level component used to test our cache (this was provided to us). 
