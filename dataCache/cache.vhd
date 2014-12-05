@@ -214,7 +214,7 @@ clk => clk,
    d => tag_out,
    q => saved_tag,
    en => req_vld);
---ADDED TO SAVE STORE DATA!!!!! DOES THIS LOOK RIGHT?
+--ADDED TO SAVE STORE DATA!!!!!
 dataSave: reg generic map (hi => 63, lo => 0) port map(
 clk => clk,
    rst => rst, 
@@ -235,7 +235,7 @@ firHalf <= firstFour AND secFour AND thirdFour;
 secHalf <= fourthFour AND fifthFour;
 --outputs
 resp_hit <= resp_hit_dummy;
-resp_hit_dummy <= (firHalf and secHalf) when (curState = "01") OR (curState ="10") else --MODIFIED FOR STORES, DOES THIS WORK?
+resp_hit_dummy <= (firHalf and secHalf) when (curState = "01") OR (curState ="10") else --MODIFIED FOR STORES
 '1' when reload_done = '1' else '0';
 resp_miss_dummy <= (NOT (firHalf AND secHalf)) when (curState = "01") or (curState = "10") else '0';
 resp_miss <= resp_miss_dummy;
@@ -244,8 +244,7 @@ resp_dirty_dummy <= (tag_out(20) AND tag_out(19)) when (curState = "01" or (curS
 --this produces the data out on a hit
 
 
-data_out(127 downto 64) <= cast_out_data(127 downto 64);-- when co_vld_dummy else "0000000000000000000000000000000000000000000000000000000000000000";
---data_out(63 downto 0) <= load_data; -error is not here
+data_out(127 downto 64) <= cast_out_data(127 downto 64);
 data_out(63 downto 0) <= cast_out_data(63 downto 0) when co_vld_dummy = '1' else load_data;
 
 --MODIFIED FOR STORE
@@ -297,21 +296,6 @@ d   => almost_done,
 q   => reload_done);
 
 almost_almost_done <= (reload_state(0) AND reload_state(1)) AND rld_vld;
---Counter to count the four beats of castout data-----------------------------------------------------------------------
---It is reset 
---It is incremented each time rld_vld is asserted
---cast_out: for i in 1 downto 0 generate
---cast_out_counter : dff port map (
---clk => clk,
---clrn => NOT(rst),
---prn => '1',
---d   => next_castout_state(i),
---q   => castout_state(i));
---end generate cast_out;
---
---next_castout_state<= "00" when resp_miss_dummy = '1' and resp_dirty = '1' else increment_cast;
---increment_cast(0) <= co_vld_dummy XOR castout_state(0);
---increment_cast(1) <= castout_state(1) XOR (co_vld_dummy AND castout_state(0));
 resp_dirty <= resp_dirty_dummy;
 
 next_co_vld<= resp_miss_dummy and resp_dirty_dummy;
@@ -415,6 +399,6 @@ curr_index;
 
 new_tag (18 downto 0) <= savedAddress (31 downto 13);
 new_tag(20) <= '0' when (NOT (rst) and NOT(rdy)) else '1';
-new_tag(19) <= '1' when storing else '0'; --IS THIS RIGHT???
+new_tag(19) <= '1' when storing else '0'; 
 
 end basic;
