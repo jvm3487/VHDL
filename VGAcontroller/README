@@ -1,0 +1,3 @@
+I produced this jointly with Sean Murray and Ashwin Dandekar.
+
+Our part of the project was implementing the myvga.vhd file and its componenets which structurally represents the VGA controller.  The vgacontoller.vhd is the top level component of this project (this was provided to us). 
